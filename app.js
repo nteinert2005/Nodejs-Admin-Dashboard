@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const web = require('./routes/web');
-
+const port = process.env.PORT || 8080;
 const app = express();
 
 hbs.registerPartials("./views/partials");
@@ -16,6 +16,6 @@ app.use('/', web);
 
 
 
-app.listen(1337, () => {
-	console.log('serving on port 1337');
+app.listen(port, () => {
+	console.log('serving on port '+port');
 });
