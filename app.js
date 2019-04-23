@@ -17,5 +17,5 @@ app.use('/', web);
 
 
 app.listen(port, () => {
-	console.log('serving on port '+port');
+	console.log('serving on port '+port);
 });
